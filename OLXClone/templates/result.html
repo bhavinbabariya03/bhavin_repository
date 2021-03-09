@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row" >
+            {% for x in items %}
+                <!-- <p>{{item.item_name}}</p> -->
+            <div class="col-sm-4">
+              <div class="card m-2">
+                <img src="{{x.photo.url}}" class="card-img-top" height="200px">
+                    <p>item name={{x.item_name}}</p>
+                  <p>prize={{x.prize}}</p>
+                  <p>Model Year={{x.model_year}}</p>
+                  <p>City={{x.model_year}}</p>
+                  <p>Description={{x.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+    </div>
+</body>
+</html>
